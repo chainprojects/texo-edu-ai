@@ -1,4 +1,4 @@
-/* TEXO.EDU AI - Modern Futuristic Design System */
+/* NokriAi - Modern Futuristic AI Job Portal & Placement Platform */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -307,7 +307,108 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
+}
+
+/* Hero Quick AI Job Search Widget */
+.hero-search-box {
+  background: rgba(14, 21, 38, 0.75);
+  border: 1px solid var(--border-glow);
+  border-radius: 60px;
+  padding: 8px 12px 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+  backdrop-filter: blur(16px);
+  max-width: 680px;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.search-input-group i {
+  color: var(--primary-cyan);
+  font-size: 1.1rem;
+}
+
+.search-input-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.search-input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.search-btn {
+  padding: 12px 26px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+/* Live Placement Pulse Ticker */
+.placement-ticker-bar {
+  background: rgba(0, 242, 254, 0.04);
+  border-y: 1px solid rgba(0, 242, 254, 0.12);
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.ticker-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  animation: tickerScroll 28s linear infinite;
+}
+
+.ticker-content-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.ticker-item strong {
+  color: #fff;
+}
+
+.ticker-badge {
+  padding: 2px 8px;
+  background: rgba(0, 230, 118, 0.2);
+  color: var(--accent-green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
 }
 
 .hero-pills {
@@ -710,7 +811,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
 }
 
-/* SECTION 4: TARGET AUDIENCE (WHO IS TEXO.EDU AI FOR?) */
+/* SECTION 4: TARGET AUDIENCE (WHO IS NOKRIAI FOR?) */
 .persona-tabs {
   display: flex;
   justify-content: center;

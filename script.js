@@ -1,6 +1,36 @@
-// TEXO.EDU AI - Interactive Platform Script
+// NokriAi - Interactive Platform Script
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Hero Quick AI Job Search Interactivity
+  const heroSearchBtn = document.getElementById('hero-search-btn');
+  const heroJobInput = document.getElementById('hero-job-input');
+  
+  if (heroSearchBtn) {
+    heroSearchBtn.addEventListener('click', () => {
+      const query = heroJobInput ? heroJobInput.value.toLowerCase() : '';
+      const engineSection = document.getElementById('placement-engine');
+      const roleSelect = document.getElementById('role-select');
+      
+      if (roleSelect && query) {
+        if (query.includes('data') || query.includes('ai') || query.includes('ml') || query.includes('python')) {
+          roleSelect.value = 'data';
+        } else if (query.includes('cloud') || query.includes('devops') || query.includes('aws') || query.includes('docker')) {
+          roleSelect.value = 'cloud';
+        } else if (query.includes('fullstack') || query.includes('mern') || query.includes('react')) {
+          roleSelect.value = 'fullstack';
+        } else {
+          roleSelect.value = 'software';
+        }
+        // Trigger match update
+        roleSelect.dispatchEvent(new Event('change'));
+      }
+      
+      if (engineSection) {
+        engineSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   // 1. Navbar Scroll & Mobile Menu Toggle
   const navbar = document.querySelector('.navbar');
   const mobileToggle = document.querySelector('.mobile-toggle');
